@@ -1,5 +1,5 @@
 <?php
-
+//dont forget na ilgay to sa top lage
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -61,17 +61,17 @@ else {
 
         http://localhost/login-system/verify.php?email='.$email.'&hash='.$hash;  
 
-
+// ito yung need to send email
                                
     $mail->isSMTP(); 
     $mail->Host = 'smtp.gmail.com'; 
     $mail->SMTPAuth = true;
-    $mail->Username = 'maangeloatienza@gmail.com';
-    $mail->Password = 'Atienza112495';
+    $mail->Username = ''; // lagay mo email mo
+    $mail->Password = ''; // password ng email
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
 
-    $mail->setFrom('maangeloatienza@gmail.com', 'Mailer');
+    $mail->setFrom('maangeloatienza@gmail.com', 'GELO');
     $mail->addAddress($to, $first_name); 
     $mail->addReplyTo('maangeloatienza@gmail.com', 'Information');
     $mail->isHTML(true);
